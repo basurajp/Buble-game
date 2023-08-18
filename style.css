@@ -93,3 +93,17 @@ body {
     cursor: pointer;
     background-color: rgb(17, 102, 17);
 }
+
+
+@media (max-width:600px) {
+    .ptop {
+        justify-content: star;
+        /* background: red; */
+        padding-left: 5px;
+    }
+.bubble{
+    padding-left: 0;
+}
+  
+
+}

@@ -1,59 +1,54 @@
 function makeBubble() {
   var clutter = "";
 
-  for (var i = 0; i <= 150; i++) {
+  for (var i = 1; i < 300; i++) {
     clutter += `<div class="bubble">${Math.floor(Math.random() * 10)}</div>`;
   }
 
-  document.querySelector(".pbottom").innerHTML = clutter;
+  document.querySelector(".pbtm").innerHTML = clutter;
 }
-
 makeBubble();
 
-var timer = 60;
+// bubble part is done using loops for and randon Number function
 
-function runTimer() {
-  var timerint = setInterval(function () {
-    if (timer > 0) {
-      timer--;
-
-      document.querySelector("#timmer").textContent = timer;
+var timmer = 60;
+function runRimmer() {
+  var timmerclear = setInterval(function () {
+    if (timmer > 0) {
+      timmer--;
+      document.querySelector("#timerVal").textContent = timmer;
     } else {
-
-      clearInterval(timerint);
-      document.querySelector('.pbottom').innerHTML=`<h1>GAME OVER </h1>` // later added this 
+      clearInterval(timmerclear);
+      document.querySelector(".pbtm").innerHTML =`<h1>Game Over</h1>`
     }
   }, 1000);
 }
 
-runTimer();
-var ranqNumHit;
-function hitval() {
-  ranqNumHit = Math.floor(Math.random() * 10);
-  document.querySelector("#hitval").textContent = ranqNumHit;
+runRimmer();
+
+//  timmer function is done
+var rn;
+function getnewhit() {
+  rn = Math.floor(Math.random() * 10);
+  document.querySelector("#hhitVal").textContent = rn;
 }
 
-hitval();
+getnewhit();
 
 var score = 0;
 
-function increasScore() {
+function increaseScore() {
   score += 10;
-  document.querySelector("#scoreVal").textContent = score;
+  document.querySelector("#scorval").textContent = score;
 }
 
-increasScore();
+// increaseScore();  score increase of 10  done
 
-// event bubbling
-document.querySelector(".pbottom").addEventListener("click", function (dets) {
-  var  clicednum =Number(dets.target.textContent);
-  if (ranqNumHit===clicednum){
-    increasScore();
+document.querySelector(".pbtm").addEventListener("click", function (dets) {
+  var clikedNum = Number(dets.target.textContent);
+  if (clikedNum === rn) {
+    increaseScore();
     makeBubble();
-    hitval()
+    getnewhit();
   }
 });
-
-
-
-

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* background-color: red; */
 }
 
 html,
@@ -10,10 +11,11 @@ body {
     width: 100%;
 }
 
+
 .main {
     width: 100%;
     height: 100%;
-    background-color: lightgreen;
+    background-color: rgb(114, 194, 114);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,88 +24,64 @@ body {
 .panel {
     width: 90%;
     height: 90%;
-    background-color: #fff;
+    background-color: white;
     border-radius: 10px;
     overflow: hidden;
+
 }
 
 .ptop {
-    padding: 0 30%;
-    height: 100px;
     width: 100%;
-    background-color: rgb(44, 119, 44);
+    height: 12vh;
+    background-color: rgb(80, 121, 80);
     display: flex;
-    color: white;
     align-items: center;
-    justify-content: space-between;
-
+    gap: 10vw;
+    /* padding-right: 100px; */
+    justify-content: space-around;
+    color: white;
 }
-
 
 .elem {
-    /* width: 10%; */
-    display: flex;
-    gap: 10px;
-    /* background-color: red; */
-    align-items: center;
-    padding-right: 10px;
-}
+    width: 15%;
 
-.elem h2 {
-    font-weight: 600;
-    font-style: 22px;
 }
-
 
 .box {
-    padding: 10px 20px;
-    background-color: #fff;
+    background-color: white;
     border-radius: 5px;
-    color: black;
-    font-weight: 600;
-    font-size: 20px;
+    padding: 10px;
+    color: rgb(44, 97, 28);
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+
 }
 
-.pbottom {
-    height: calc(100% - 100px);
+.pbtm {
     width: 100%;
+    height: calc(100% - 12vh);
     /* background-color: red; */
-    padding: 15px;
     display: flex;
-    gap: 10px;
     flex-wrap: wrap;
-    align-items: center;
+    margin-left: 10px;
     justify-content: center;
+    align-items: center;
+
 }
 
 .bubble {
-    width: 50px;
-
-    height: 50px;
-    background-color: rgb(50, 197, 50);
-    color: white;
+    height: 45px;
+    width: 45px;
+    background-color: rgb(77, 153, 47);
     border-radius: 50%;
+    margin: 1vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
-}
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
 
-.bubble:hover{
-    cursor: pointer;
-    background-color: rgb(17, 102, 17);
-}
-
-
-@media (max-width:500px) {
-    .ptop {
-        justify-content: star;
-        /* background: red; */
-        padding-left: 5px;
-    }
-.bubble{
-    padding-left: 0;
-}
-  
 
 }

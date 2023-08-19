@@ -95,7 +95,7 @@ body {
 }
 
 
-@media (max-width:600px) {
+@media (max-width:500px) {
     .ptop {
         justify-content: star;
         /* background: red; */
